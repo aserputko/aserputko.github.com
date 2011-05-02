@@ -349,11 +349,11 @@
  
     <table> 
       <tr> 
-        <td><a href="underscore.js">Development Version (1.1.6)</a></td> 
+        <td><a href="http://documentcloud.github.com/underscore/underscore.js">Development Version (1.1.6)</a></td> 
         <td><i>27kb, Uncompressed with Comments</i></td> 
       </tr> 
       <tr> 
-        <td><a href="underscore-min.js">Production Version (1.1.6)</a></td> 
+        <td><a href="http://documentcloud.github.com/underscore/underscore-min.js">Production Version (1.1.6)</a></td> 
         <td><i>3kb, Minified and Gzipped</i></td> 
       </tr> 
     </table>
@@ -437,8 +437,7 @@
 	identical ways to double a list of numbers.
 	</p> 
  
-    <pre> 
-_.map([1, 2, 3], function(n){ return n * 2; });
+    <pre>_.map([1, 2, 3], function(n){ return n * 2; });
 _([1, 2, 3]).map(function(n){ return n * 2; });</pre>
  
 	<p> 
@@ -450,8 +449,7 @@ _([1, 2, 3]).map(function(n){ return n * 2; });</pre>
 	every word in a song.
 	</p> 
  
-<pre> 
-var lyrics = [
+<pre>var lyrics = [
   {line : 1, words : "I'm a lumberjack and I'm okay"},
   {line : 2, words : "I sleep all night and I work all day"},
   {line : 3, words : "He's a lumberjack and he's okay"},
@@ -489,8 +487,7 @@ _(lyrics).chain()
         arguments will be <tt>(value, key, list)</tt>. Delegates to the native
         <b>forEach</b> function if it exists.
       </p> 
-      <pre> 
-_.each([1, 2, 3], function(num){ alert(num); });
+<pre>_.each([1, 2, 3], function(num){ alert(num); });
 =&gt; alerts each number in turn...
 _.each({one : 1, two : 2, three : 3}, function(num, key){ alert(num); });
 =&gt; alerts each number in turn...</pre>
@@ -502,8 +499,7 @@ _.each({one : 1, two : 2, three : 3}, function(num, key){ alert(num); });
         exists, it will be used instead. If <b>list</b> is a JavaScript object,
         <b>iterator</b>'s arguments will be <tt>(value, key, list)</tt>.
       </p> 
-      <pre> 
-_.map([1, 2, 3], function(num){ return num * 3; });
+<pre>_.map([1, 2, 3], function(num){ return num * 3; });
 =&gt; [3, 6, 9]
 _.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
 =&gt; [3, 6, 9]</pre> 
@@ -517,8 +513,7 @@ _.map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3; });
         of the reduction, and each successive step of it should be returned by
         <b>iterator</b>.
       </p> 
-      <pre> 
-var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+<pre>var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
 =&gt; 6
 </pre> 
  
@@ -531,8 +526,7 @@ var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
         is not as useful in JavaScript as it would be in a language with lazy
         evaluation.
       </p> 
-      <pre> 
-var list = [[0, 1], [2, 3], [4, 5]];
+<pre>var list = [[0, 1], [2, 3], [4, 5]];
 var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
 =&gt; [4, 5, 2, 3, 0, 1]
 </pre> 
@@ -545,8 +539,7 @@ var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
         soon as it finds an acceptable element, and doesn't traverse the
         entire list.
       </p> 
-      <pre> 
-var even = _.detect([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+<pre>var even = _.detect([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 =&gt; 2
 </pre> 
  
@@ -558,8 +551,7 @@ var even = _.detect([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
         the values that pass a truth test (<b>iterator</b>). Delegates to the
         native <b>filter</b> method, if it exists.
       </p> 
-      <pre> 
-var evens = _.select([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+<pre>var evens = _.select([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 =&gt; [2, 4, 6]
 </pre> 
  
@@ -569,8 +561,7 @@ var evens = _.select([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
         Returns the values in <b>list</b> without the elements that the truth
         test (<b>iterator</b>) passes. The opposite of <b>select</b>.
       </p> 
-      <pre> 
-var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+<pre>var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
 =&gt; [1, 3, 5]
 </pre> 
  
@@ -581,7 +572,7 @@ var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
         Returns <i>true</i> if all of the values in the <b>list</b> pass the <b>iterator</b> 
         truth test. Delegates to the native method <b>every</b>, if present.
       </p> 
-      <pre> 
+<pre>
 _.all([true, 1, null, 'yes'], _.identity);
 =&gt; false
 </pre> 
@@ -595,10 +586,9 @@ _.all([true, 1, null, 'yes'], _.identity);
         if a true element is found. Delegates to the native method <b>some</b>,
         if present.
       </p> 
-      <pre> 
-_.any([null, 0, 'yes', false]);
+<pre>_.any([null, 0, 'yes', false]);
 =&gt; true
-</pre> 
+</pre>
  
       <p id="CollectionFunctions-include"> 
         <b class="header">include</b><code>_.include(list, value)</code> 
@@ -608,7 +598,7 @@ _.any([null, 0, 'yes', false]);
         <i>===</i> to test equality. Uses <b>indexOf</b> internally, if <b>list</b> 
         is an Array.
       </p> 
-      <pre> 
+<pre>
 _.include([1, 2, 3], 3);
 =&gt; true
 </pre> 
@@ -620,8 +610,7 @@ _.include([1, 2, 3], 3);
         Any extra arguments passed to <b>invoke</b> will be forwarded on to the
         method invocation.
       </p> 
-      <pre> 
-_.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
+<pre>_.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
 =&gt; [[1, 5, 7], [1, 2, 3]]
 </pre> 
  
@@ -631,8 +620,7 @@ _.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
         An convenient version of what is perhaps the most common use-case for
         <b>map</b>: extracting a list of property values.
       </p> 
-      <pre> 
-var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
+<pre>var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
 _.pluck(stooges, 'name');
 =&gt; ["moe", "larry", "curly"]
 </pre> 
@@ -644,8 +632,7 @@ _.pluck(stooges, 'name');
         it will be used on each value to generate the criterion by which the
         value is ranked.
       </p> 
-      <pre> 
-var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
+<pre>var stooges = [{name : 'moe', age : 40}, {name : 'larry', age : 50}, {name : 'curly', age : 60}];
 _.max(stooges, function(stooge){ return stooge.age; });
 =&gt; {name : 'curly', age : 60};
 </pre> 
@@ -657,8 +644,7 @@ _.max(stooges, function(stooge){ return stooge.age; });
         it will be used on each value to generate the criterion by which the
         value is ranked.
       </p> 
-      <pre> 
-var numbers = [10, 5, 100, 2, 1000];
+<pre>var numbers = [10, 5, 100, 2, 1000];
 _.min(numbers);
 =&gt; 2
 </pre> 
@@ -669,8 +655,7 @@ _.min(numbers);
         Returns a sorted <b>list</b>, ranked by the results of running each
         value through <b>iterator</b>.
       </p> 
-      <pre> 
-_.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
+<pre>_.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
 =&gt; [5, 4, 6, 3, 1, 2]
 </pre> 
  
@@ -682,8 +667,7 @@ _.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
         sorted order. If an <b>iterator</b> is passed, it will be used to compute
         the sort ranking of each value.
       </p> 
-      <pre> 
-_.sortedIndex([10, 20, 30, 40, 50], 35);
+<pre>_.sortedIndex([10, 20, 30, 40, 50], 35);
 =&gt; 3
 </pre> 
  
@@ -693,8 +677,7 @@ _.sortedIndex([10, 20, 30, 40, 50], 35);
         Converts the <b>list</b> (anything that can be iterated over), into a
         real Array. Useful for transmuting the <b>arguments</b> object.
       </p> 
-      <pre> 
-(function(){ return _.toArray(arguments).slice(0); })(1, 2, 3);
+<pre>(function(){ return _.toArray(arguments).slice(0); })(1, 2, 3);
 =&gt; [1, 2, 3]
 </pre> 
  
@@ -703,7 +686,7 @@ _.sortedIndex([10, 20, 30, 40, 50], 35);
         <br /> 
         Return the number of values in the <b>list</b>.
       </p> 
-      <pre> 
+<pre>
 _.size({one : 1, two : 2, three : 3});
 =&gt; 3
 </pre>
@@ -721,8 +704,7 @@ _.size({one : 1, two : 2, three : 3});
         Returns the first element of an <b>array</b>. Passing <b>n</b> will
         return the first <b>n</b> elements of the array.
       </p> 
-      <pre> 
-_.first([5, 4, 3, 2, 1]);
+<pre>_.first([5, 4, 3, 2, 1]);
 =&gt; 5
 </pre> 
  
@@ -733,8 +715,7 @@ _.first([5, 4, 3, 2, 1]);
         Returns the <b>rest</b> of the elements in an array. Pass an <b>index</b> 
         to return the values of the array from that index onward.
       </p> 
-      <pre> 
-_.rest([5, 4, 3, 2, 1]);
+<pre>_.rest([5, 4, 3, 2, 1]);
 =&gt; [4, 3, 2, 1]
 </pre> 
  
@@ -743,8 +724,7 @@ _.rest([5, 4, 3, 2, 1]);
         <br /> 
         Returns the last element of an <b>array</b>.
       </p> 
-      <pre> 
-_.last([5, 4, 3, 2, 1]);
+<pre>_.last([5, 4, 3, 2, 1]);
 =&gt; 1
 </pre> 
  
@@ -755,8 +735,7 @@ _.last([5, 4, 3, 2, 1]);
         In JavaScript, <i>false</i>, <i>null</i>, <i>0</i>, <i>""</i>,
         <i>undefined</i> and <i>NaN</i> are all falsy.
       </p> 
-      <pre> 
-_.compact([0, 1, false, 2, '', 3]);
+<pre>_.compact([0, 1, false, 2, '', 3]);
 =&gt; [1, 2, 3]
 </pre> 
  
@@ -765,8 +744,7 @@ _.compact([0, 1, false, 2, '', 3]);
         <br /> 
         Flattens a nested <b>array</b> (the nesting can be to any depth).
       </p> 
-      <pre> 
-_.flatten([1, [2], [3, [[[4]]]]]);
+<pre>_.flatten([1, [2], [3, [[[4]]]]]);
 =&gt; [1, 2, 3, 4];
 </pre> 
  
@@ -776,8 +754,7 @@ _.flatten([1, [2], [3, [[[4]]]]]);
         Returns a copy of the <b>array</b> with all instances of the <b>values</b> 
         removed. <i>===</i> is used for the equality test.
       </p> 
-      <pre> 
-_.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
+<pre>_.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
 =&gt; [2, 3, 4]
 </pre> 
  
@@ -789,8 +766,7 @@ _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
         object equality. If you know in advance that the <b>array</b> is sorted,
         passing <i>true</i> for <b>isSorted</b> will run a much faster algorithm.
       </p> 
-      <pre> 
-_.uniq([1, 2, 1, 3, 1, 4]);
+<pre>_.uniq([1, 2, 1, 3, 1, 4]);
 =&gt; [1, 2, 3, 4]
 </pre> 
  
@@ -800,8 +776,7 @@ _.uniq([1, 2, 1, 3, 1, 4]);
         Computes the list of values that are the intersection of all the <b>arrays</b>.
         Each value in the result is present in each of the <b>arrays</b>.
       </p> 
-      <pre> 
-_.intersect([1, 2, 3], [101, 2, 1, 10], [2, 1]);
+<pre>_.intersect([1, 2, 3], [101, 2, 1, 10], [2, 1]);
 =&gt; [1, 2]
 </pre> 
  
@@ -814,8 +789,7 @@ _.intersect([1, 2, 3], [101, 2, 1, 10], [2, 1]);
         If you're working with a matrix of nested arrays, <b>zip.apply</b> 
         can transpose the matrix in a similar fashion.
       </p> 
-      <pre> 
-_.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]);
+<pre>_.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]);
 =&gt; [["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]
 </pre> 
  
@@ -828,8 +802,7 @@ _.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]);
         large array, and you know that the array is already sorted, pass <tt>true</tt> 
         for <b>isSorted</b> to use a faster binary search.
       </p> 
-      <pre> 
-_.indexOf([1, 2, 3], 2);
+<pre>_.indexOf([1, 2, 3], 2);
 =&gt; 1
 </pre> 
  
@@ -840,8 +813,7 @@ _.indexOf([1, 2, 3], 2);
         or <i>-1</i> if value is not present. Uses the native <b>lastIndexOf</b> 
         function if possible.
       </p> 
-      <pre> 
-_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+<pre>_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
 =&gt; 4
 </pre> 
  
@@ -854,8 +826,7 @@ _.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
         from <b>start</b> to <b>stop</b>, incremented (or decremented) by <b>step</b>,
         exclusive.
       </p> 
-      <pre> 
-_.range(10);
+<pre>_.range(10);
 =&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 _.range(1, 11);
 =&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -877,8 +848,7 @@ _.range(0);
         Optionally, bind <b>arguments</b> to the <b>function</b> to pre-fill them,
         also known as <b>currying</b>.
       </p> 
-      <pre> 
-var func = function(greeting){ return greeting + ': ' + this.name };
+<pre>var func = function(greeting){ return greeting + ': ' + this.name };
 func = _.bind(func, {name : 'moe'}, 'hi');
 func();
 =&gt; 'hi: moe'
@@ -894,8 +864,7 @@ func();
         <i>this</i>. If no <b>methodNames</b> are provided, all of the object's
         function properties will be bound to it.
       </p> 
-      <pre> 
-var buttonView = {
+<pre>var buttonView = {
   label   : 'underscore',
   onClick : function(){ alert('clicked: ' + this.label); },
   onHover : function(){ console.log('hovering: ' + this.label); }
@@ -915,8 +884,7 @@ jQuery('#underscore_button').bind('click', buttonView.onClick);
         <b>hashFunction</b> just uses the first argument to the memoized function
         as the key.
       </p> 
-      <pre> 
-var fibonacci = function(n) {
+<pre>var fibonacci = function(n) {
   return n &lt; 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
 };
 var fastFibonacci = _.memoize(fibonacci);
@@ -929,8 +897,7 @@ var fastFibonacci = _.memoize(fibonacci);
         milliseconds. If you pass the optional <b>arguments</b>, they will be
         forwarded on to the <b>function</b> when it is invoked.
       </p> 
-      <pre> 
-var log = _.bind(console.log, console);
+<pre>var log = _.bind(console.log, console);
 _.delay(log, 1000, 'logged later');
 =&gt; 'logged later' // Appears after one second.
 </pre> 
@@ -943,8 +910,7 @@ _.delay(log, 1000, 'logged later');
         expensive computations or HTML rendering in chunks without blocking the UI thread
         from updating.
       </p> 
-      <pre> 
-_.defer(function(){ alert('deferred'); });
+<pre>_.defer(function(){ alert('deferred'); });
 // Returns from the function before the alert runs.
 </pre> 
  
@@ -956,8 +922,7 @@ _.defer(function(){ alert('deferred'); });
         milliseconds. Useful for rate-limiting events that occur faster than you
         can keep up with.
       </p> 
-      <pre> 
-var throttled = _.throttle(updatePosition, 100);
+<pre>var throttled = _.throttle(updatePosition, 100);
 $(window).scroll(throttled);
 </pre> 
  
@@ -970,8 +935,7 @@ $(window).scroll(throttled);
         For example: rendering a preview of a Markdown comment, recalculating a
         layout after the window has stopped being resized...
       </p> 
-      <pre> 
-var lazyLayout = _.debounce(calculateLayout, 300);
+<pre>var lazyLayout = _.debounce(calculateLayout, 300);
 $(window).resize(lazyLayout);
 </pre> 
  
@@ -983,8 +947,7 @@ $(window).resize(lazyLayout);
         the value from the original call. Useful for initialization functions,
         instead of having to set a boolean flag and then check it later.
       </p> 
-      <pre> 
-var initialize = _.once(createApplication);
+<pre>var initialize = _.once(createApplication);
 initialize();
 initialize();
 // Application is only created once.
@@ -998,8 +961,7 @@ initialize();
         where you want to be sure that all the async calls have finished, before
         proceeding.
       </p> 
-      <pre> 
-var renderNotes = _.after(notes.length, render);
+<pre>var renderNotes = _.after(notes.length, render);
 _.each(notes, function(note) {
   note.asyncSave({success: renderNotes}); 
 });
@@ -1014,8 +976,7 @@ _.each(notes, function(note) {
         execute code before and after the <b>function</b> runs, adjust the arguments,
         and execute it conditionally.
       </p> 
-      <pre> 
-var hello = function(name) { return "hello: " + name; };
+<pre>var hello = function(name) { return "hello: " + name; };
 hello = _.wrap(hello, function(func) {
   return "before, " + func("moe") + ", after";
 });
@@ -1031,8 +992,7 @@ hello();
         composing the functions <i>f()</i>, <i>g()</i>, and <i>h()</i> produces
         <i>f(g(h()))</i>.
       </p> 
-      <pre> 
-var greet    = function(name){ return "hi: " + name; };
+<pre>var greet    = function(name){ return "hi: " + name; };
 var exclaim  = function(statement){ return statement + "!"; };
 var welcome = _.compose(exclaim, greet);
 welcome('moe');
@@ -1046,8 +1006,7 @@ welcome('moe');
         <br /> 
         Retrieve all the names of the <b>object</b>'s properties.
       </p> 
-      <pre> 
-_.keys({one : 1, two : 2, three : 3});
+<pre>_.keys({one : 1, two : 2, three : 3});
 =&gt; ["one", "two", "three"]
 </pre> 
  
@@ -1056,8 +1015,7 @@ _.keys({one : 1, two : 2, three : 3});
         <br /> 
         Return all of the values of the <b>object</b>'s properties.
       </p> 
-      <pre> 
-_.values({one : 1, two : 2, three : 3});
+<pre>_.values({one : 1, two : 2, three : 3});
 =&gt; [1, 2, 3]
 </pre> 
  
@@ -1068,8 +1026,7 @@ _.values({one : 1, two : 2, three : 3});
         Returns a sorted list of the names of every method in an object &mdash;
         that is to say, the name of every function property of the object.
       </p> 
-      <pre> 
-_.functions(_);
+<pre>_.functions(_);
 =&gt; ["all", "any", "bind", "bindAll", "clone", "compact", "compose" ...
 </pre> 
  
@@ -1080,8 +1037,7 @@ _.functions(_);
         <b>destination</b> object. It's in-order, to the last source will override
         properties of the same name in previous arguments.
       </p> 
-      <pre> 
-_.extend({name : 'moe'}, {age : 50});
+<pre>_.extend({name : 'moe'}, {age : 50});
 =&gt; {name : 'moe', age : 50}
 </pre> 
  
@@ -1092,8 +1048,7 @@ _.extend({name : 'moe'}, {age : 50});
         <b>defaults</b> objects. As soon as the property is filled, further defaults
         will have no effect.
       </p> 
-      <pre> 
-var iceCream = {flavor : "chocolate"};
+<pre>var iceCream = {flavor : "chocolate"};
 _.defaults(iceCream, {flavor : "vanilla", sprinkles : "lots"});
 =&gt; {flavor : "chocolate", sprinkles : "lots"}
 </pre> 
@@ -1104,8 +1059,7 @@ _.defaults(iceCream, {flavor : "vanilla", sprinkles : "lots"});
         Create a shallow-copied clone of the <b>object</b>. Any nested objects
         or arrays will be copied by reference, not duplicated.
       </p> 
-      <pre> 
-_.clone({name : 'moe'});
+<pre>_.clone({name : 'moe'});
 =&gt; {name : 'moe'};
 </pre> 
  
@@ -1115,8 +1069,7 @@ _.clone({name : 'moe'});
         Invokes <b>interceptor</b> with the <b>object</b>, and then returns <b>object</b>.
         The primary purpose of this method is to "tap into" a method chain, in order to perform operations on intermediate results within the chain.
       </p> 
-      <pre> 
-_([1,2,3,200]).chain().
+<pre>_([1,2,3,200]).chain().
   select(function(num) { return num % 2 == 0; }).
   tap(console.log).
   map(function(num) { return num * num }).
@@ -1132,8 +1085,7 @@ _([1,2,3,200]).chain().
 	следует ли их считать равными. Функция возвращает <i>true</i>, если два
 	объекта равны.
       </p> 
-      <pre> 
-var moe   = {name : 'moe', luckyNumbers : [13, 27, 34]};
+<pre>var moe   = {name : 'moe', luckyNumbers : [13, 27, 34]};
 var clone = {name : 'moe', luckyNumbers : [13, 27, 34]};
 moe == clone;
 =&gt; false
@@ -1146,8 +1098,7 @@ _.isEqual(moe, clone);
         <br /> 
         Функция возвращает <i>true</i>, если аргумент <b>object</b> не содержит значений.
       </p> 
-      <pre> 
-_.isEmpty([1, 2, 3]);
+<pre>_.isEmpty([1, 2, 3]);
 =&gt; false
 _.isEmpty({});
 =&gt; true
@@ -1158,8 +1109,7 @@ _.isEmpty({});
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> является DOM элементом.
       </p> 
-      <pre> 
-_.isElement(jQuery('body')[0]);
+<pre>_.isElement(jQuery('body')[0]);
 =&gt; true
 </pre> 
  
@@ -1168,8 +1118,7 @@ _.isElement(jQuery('body')[0]);
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> является массивом.
       </p> 
-      <pre> 
-(function(){ return _.isArray(arguments); })();
+<pre>(function(){ return _.isArray(arguments); })();
 =&gt; false
 _.isArray([1,2,3]);
 =&gt; true
@@ -1180,8 +1129,7 @@ _.isArray([1,2,3]);
         <br />
 	Функция возвращает <i>true</i>, если <b>object</b> является аргументом объекта.
       	</p> 
-      <pre> 
-(function(){ return _.isArguments(arguments); })(1, 2, 3);
+<pre>(function(){ return _.isArguments(arguments); })(1, 2, 3);
 =&gt; true
 _.isArguments([1,2,3]);
 =&gt; false
@@ -1192,8 +1140,7 @@ _.isArguments([1,2,3]);
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> является функцией.
       </p> 
-      <pre> 
-_.isFunction(alert);
+<pre>_.isFunction(alert);
 =&gt; true
 </pre> 
  
@@ -1202,8 +1149,7 @@ _.isFunction(alert);
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> является строкой.
       </p> 
-      <pre> 
-_.isString("moe");
+<pre>_.isString("moe");
 =&gt; true
 </pre> 
  
@@ -1212,8 +1158,7 @@ _.isString("moe");
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> является числом.
       </p> 
-      <pre> 
-_.isNumber(8.4 * 5);
+<pre>_.isNumber(8.4 * 5);
 =&gt; true
 </pre> 
  
@@ -1222,8 +1167,7 @@ _.isNumber(8.4 * 5);
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> либо <i>true</i>, либо <i>false</i>.
       </p> 
-      <pre> 
-_.isBoolean(null);
+<pre>_.isBoolean(null);
 =&gt; false
 </pre> 
  
@@ -1232,8 +1176,7 @@ _.isBoolean(null);
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> является объектом Date.
       </p> 
-      <pre> 
-_.isDate(new Date());
+<pre>_.isDate(new Date());
 =&gt; true
 </pre> 
  
@@ -1242,8 +1185,7 @@ _.isDate(new Date());
         <br /> 
         Функция возвращает <i>true</i>, если <b>object</b> является объектом RegExp.
       </p> 
-<pre> 
-_.isRegExp(/moe/);
+<pre>_.isRegExp(/moe/);
 =&gt; true
 </pre> 
  
@@ -1253,8 +1195,7 @@ _.isRegExp(/moe/);
         Функция возвращает <i>true</i>, если значение <b>object</b> является <i>NaN</i>.<br /> Примечание: эта функция не такая же,
 	как и функция <b>isNaN</b>, которая возвращает true, если переменная не определена (<i>undefined</i>).
       	</p> 
-<pre> 
-_.isNaN(NaN);
+<pre>_.isNaN(NaN);
 =&gt; true
 isNaN(undefined);
 =&gt; true
@@ -1267,8 +1208,7 @@ _.isNaN(undefined);
         <br /> 
 	Функция возвращает <i>true</i>, если значение <b>object</b> является <i>null</i>.
       </p> 
-      <pre> 
-_.isNull(null);
+<pre>_.isNull(null);
 =&gt; true
 _.isNull(undefined);
 =&gt; false
@@ -1279,8 +1219,7 @@ _.isNull(undefined);
         <br /> 
 	Функция возвращает <i>true</i>, если значение <b>variable</b> является <i>undefined</i>.
       </p> 
-      <pre> 
-_.isUndefined(window.missingVariable);
+<pre>_.isUndefined(window.missingVariable);
 =&gt; true
 </pre>
 
@@ -1303,8 +1242,7 @@ var underscore = _.noConflict();</pre>
         This function looks useless, but is used throughout Underscore as
         a default iterator.
       </p> 
-      <pre> 
-var moe = {name : 'moe'};
+<pre>var moe = {name : 'moe'};
 moe === _.identity(moe);
 =&gt; true</pre> 
  
@@ -1313,8 +1251,7 @@ moe === _.identity(moe);
         <br /> 
         Invokes the given iterator function <b>n</b> times.
       </p> 
-      <pre> 
-_(3).times(function(){ genie.grantWish(); });</pre> 
+<pre>_(3).times(function(){ genie.grantWish(); });</pre> 
  
       <p id="Utility-mixin"> 
         <b class="header">mixin</b><code>_.mixin(object)</code> 
@@ -1323,8 +1260,7 @@ _(3).times(function(){ genie.grantWish(); });</pre>
         a hash of <tt>{name: function}</tt> definitions to have your functions 
         added to the Underscore object, as well as the OOP wrapper.
       </p> 
-      <pre> 
-_.mixin({
+<pre>_.mixin({
   capitalize : function(string) {
     return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
   }
@@ -1339,8 +1275,7 @@ _("fabio").capitalize();
         Generate a globally-unique id for client-side models or DOM elements
         that need one. If <b>prefix</b> is passed, the id will be appended to it.
       </p> 
-      <pre> 
-_.uniqueId('contact_');
+<pre>_.uniqueId('contact_');
 =&gt; 'contact_104'</pre> 
  
       <p id="Utility-template"> 
@@ -1356,8 +1291,7 @@ _.uniqueId('contact_');
         object as the second parameter to <b>template</b> in order to render
         immediately instead of returning a template function.
       </p> 
-      <pre> 
-var compiled = _.template("hello: &lt;%= name %&gt;");
+<pre>var compiled = _.template("hello: &lt;%= name %&gt;");
 compiled({name : 'moe'});
 =&gt; "hello: moe"
  
@@ -1370,8 +1304,7 @@ _.template(list, {people : ['moe', 'curly', 'larry']});
         sometimes more convenient than using <tt>&lt;%= ... %&gt;</tt>.
       </p> 
       
-      <pre> 
-var compiled = _.template("&lt;% print('Hello ' + epithet); %&gt;");
+<pre>var compiled = _.template("&lt;% print('Hello ' + epithet); %&gt;");
 compiled({epithet: "stooge"});
 =&gt; "Hello stooge."</pre> 
  
@@ -1387,8 +1320,7 @@ compiled({epithet: "stooge"});
         style templating:
       </p> 
  
-      <pre> 
-_.templateSettings = {
+<pre>_.templateSettings = {
   interpolate : /\{\{(.+?)\}\}/g
 };
  
@@ -1405,8 +1337,7 @@ template({name : "Mustache"});
 	to return wrapped objects until <tt>value</tt> is used. (
 	<a href="#styles">A more realistic example.</a>)
 	</p> 
-<pre> 
-var stooges = [{name : 'curly', age : 25}, {name : 'moe', age : 21}, {name : 'larry', age : 23}];
+<pre>var stooges = [{name : 'curly', age : 25}, {name : 'moe', age : 21}, {name : 'larry', age : 23}];
 var youngest = _(stooges).chain()
   .sortBy(function(stooge){ return stooge.age; })
   .map(function(stooge){ return stooge.name + ' is ' + stooge.age; })
@@ -1420,8 +1351,7 @@ var youngest = _(stooges).chain()
         <br /> 
         Extracts the value of a wrapped object.
       </p> 
-      <pre>
-_([1, 2, 3]).value();
+<pre>_([1, 2, 3]).value();
 =&gt; [1, 2, 3]
 </pre> 
  
