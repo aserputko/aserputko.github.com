@@ -1129,7 +1129,7 @@ _([1,2,3,200]).chain().
         <b class="header">isEqual</b><code>_.isEqual(object, other)</code> 
         <br />
 	Выполняет сравнение между двумя объектами, чтобы определить,
-	следует ли их считать равными. Функция возвращает <i>true</i> если два
+	следует ли их считать равными. Функция возвращает <i>true</i>, если два
 	объекта равны.
       </p> 
       <pre> 
@@ -1144,7 +1144,7 @@ _.isEqual(moe, clone);
       <p id="Objects-isEmpty"> 
         <b class="header">isEmpty</b><code>_.isEmpty(object)</code> 
         <br /> 
-        Функция возвращает <i>true</i> если аргумент <b>object</b> не содержит значений.
+        Функция возвращает <i>true</i>, если аргумент <b>object</b> не содержит значений.
       </p> 
       <pre> 
 _.isEmpty([1, 2, 3]);
@@ -1156,7 +1156,7 @@ _.isEmpty({});
       <p id="Objects-isElement"> 
         <b class="header">isElement</b><code>_.isElement(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is a DOM element.
+        Функция возвращает <i>true</i>, если <b>object</b> является DOM элементом.
       </p> 
       <pre> 
 _.isElement(jQuery('body')[0]);
@@ -1166,7 +1166,7 @@ _.isElement(jQuery('body')[0]);
       <p id="Objects-isArray"> 
         <b class="header">isArray</b><code>_.isArray(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is an Array.
+        Функция возвращает <i>true</i>, если <b>object</b> является массивом.
       </p> 
       <pre> 
 (function(){ return _.isArray(arguments); })();
@@ -1177,9 +1177,9 @@ _.isArray([1,2,3]);
  
       <p id="Objects-isArguments"> 
         <b class="header">isArguments</b><code>_.isArguments(object)</code> 
-        <br /> 
-        Returns <i>true</i> if <b>object</b> is an Arguments object.
-      </p> 
+        <br />
+	Функция возвращает <i>true</i>, если <b>object</b> является аргументом объекта.
+      	</p> 
       <pre> 
 (function(){ return _.isArguments(arguments); })(1, 2, 3);
 =&gt; true
@@ -1190,7 +1190,7 @@ _.isArguments([1,2,3]);
       <p id="Objects-isFunction"> 
         <b class="header">isFunction</b><code>_.isFunction(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is a Function.
+        Функция возвращает <i>true</i>, если <b>object</b> является функцией.
       </p> 
       <pre> 
 _.isFunction(alert);
@@ -1200,7 +1200,7 @@ _.isFunction(alert);
       <p id="Objects-isString"> 
         <b class="header">isString</b><code>_.isString(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is a String.
+        Функция возвращает <i>true</i>, если <b>object</b> является строкой.
       </p> 
       <pre> 
 _.isString("moe");
@@ -1210,7 +1210,7 @@ _.isString("moe");
       <p id="Objects-isNumber"> 
         <b class="header">isNumber</b><code>_.isNumber(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is a Number.
+        Функция возвращает <i>true</i>, если <b>object</b> является числом.
       </p> 
       <pre> 
 _.isNumber(8.4 * 5);
@@ -1220,7 +1220,7 @@ _.isNumber(8.4 * 5);
       <p id="Objects-isBoolean"> 
         <b class="header">isBoolean</b><code>_.isBoolean(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is either <i>true</i> or <i>false</i>.
+        Функция возвращает <i>true</i>, если <b>object</b> либо <i>true</i>, либо <i>false</i>.
       </p> 
       <pre> 
 _.isBoolean(null);
@@ -1230,7 +1230,7 @@ _.isBoolean(null);
       <p id="Objects-isDate"> 
         <b class="header">isDate</b><code>_.isDate(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is a Date.
+        Функция возвращает <i>true</i>, если <b>object</b> является объектом Date.
       </p> 
       <pre> 
 _.isDate(new Date());
@@ -1240,9 +1240,9 @@ _.isDate(new Date());
       <p id="Objects-isRegExp"> 
         <b class="header">isRegExp</b><code>_.isRegExp(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is a RegExp.
+        Функция возвращает <i>true</i>, если <b>object</b> является объектом RegExp.
       </p> 
-      <pre> 
+<pre> 
 _.isRegExp(/moe/);
 =&gt; true
 </pre> 
@@ -1250,11 +1250,10 @@ _.isRegExp(/moe/);
       <p id="Objects-isNaN"> 
         <b class="header">isNaN</b><code>_.isNaN(object)</code> 
         <br /> 
-        Returns <i>true</i> if <b>object</b> is <i>NaN</i>.<br /> Note: this is not
-        the same as the native <b>isNaN</b> function, which will also return
-        true if the variable is <i>undefined</i>.
-      </p> 
-      <pre> 
+        Функция возвращает <i>true</i>, если значение <b>object</b> является <i>NaN</i>.<br /> Примечание: эта функция не такая же,
+	как и функция <b>isNaN</b>, которая возвращает true, если переменная не определена (<i>undefined</i>).
+      	</p> 
+<pre> 
 _.isNaN(NaN);
 =&gt; true
 isNaN(undefined);
@@ -1266,7 +1265,7 @@ _.isNaN(undefined);
       <p id="Objects-isNull"> 
         <b class="header">isNull</b><code>_.isNull(object)</code> 
         <br /> 
-        Returns <i>true</i> if the value of <b>object</b> is <i>null</i>.
+	Функция возвращает <i>true</i>, если значение <b>object</b> является <i>null</i>.
       </p> 
       <pre> 
 _.isNull(null);
@@ -1278,7 +1277,7 @@ _.isNull(undefined);
       <p id="Objects-isUndefined"> 
         <b class="header">isUndefined</b><code>_.isUndefined(variable)</code> 
         <br /> 
-        Returns <i>true</i> if <b>variable</b> is <i>undefined</i>.
+	Функция возвращает <i>true</i>, если значение <b>variable</b> является <i>undefined</i>.
       </p> 
       <pre> 
 _.isUndefined(window.missingVariable);
