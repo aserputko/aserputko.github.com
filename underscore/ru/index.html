@@ -306,9 +306,9 @@
 	<p> 
 	<a href="#">Underscore</a> - это
 	JavaScript библиотека, которая обладает множеством функций программирования, 
-	примеры которых можно увидеть в <a href="http://prototypejs.org/api">Prototype.js</a> 
+	примеры которых можно найти в <a href="http://prototypejs.org/api">Prototype.js</a> 
 	(или <a href="http://www.ruby-doc.org/core/classes/Enumerable.html">Ruby</a>),
-	но без расширения любого встоеного объекта JavaScript. Эта библиотека так же
+	но без расширения любого из встоеного объекта JavaScript. Библиотека так же
 	совместима с <a href="http://docs.jquery.com">jQuery</a>.
 	</p> 
  
@@ -316,7 +316,7 @@
 	Underscore предоставляет больше 60 функций, которые поддерживают 
 	как известные функции: <b>map</b>, <b>select</b>, <b>invoke</b> &mdash;
 	так и специфические функции: функции связи, javascript шаблонизаторы,
-	проверки равенств, и т.д. It delegates to built-in
+	специфические проверки равенств, и т.д. It delegates to built-in
 	functions, if present, so modern browsers will use the
 	native implementations of <b>forEach</b>, <b>map</b>, <b>reduce</b>,
 	<b>filter</b>, <b>every</b>, <b>some</b> and <b>indexOf</b>.
@@ -335,7 +335,7 @@
 	Хостингом проекта является <a href="http://github.com/documentcloud/underscore/">GitHub</a>.
 	Вы можете сообщать об ошибках и обсуждать их на странице 
 	<a href="http://github.com/documentcloud/underscore/issues">Задач</a>,
-	публиковать в twitter на адрес <a href="http://twitter.com/documentcloud">@documentcloud</a>,
+	публиковать в twitter на имя <a href="http://twitter.com/documentcloud">@documentcloud</a>,
 	либо с  хеш-тегом <tt>#documentcloud</tt>.
 	</p> 
  
@@ -343,103 +343,32 @@
       <i>Underscore is an open-source component of <a href="http://documentcloud.org/">DocumentCloud</a>.</i> 
     </p>
  
-    <h2 id="Downloads">Downloads <i style="padding-left: 12px; font-size:12px;">(Right-click, and use "Save As")</i></h2> 
+    <h2 id="Downloads">Скачать <i style="padding-left: 12px; font-size:12px;">(кликните правой кнопкой миши и выберите "Сохранить как")</i></h2> 
  
     <table> 
       <tr> 
         <td><a href="http://documentcloud.github.com/underscore/underscore.js">Development Version (1.1.6)</a></td> 
-        <td><i>27kb, Uncompressed with Comments</i></td> 
+        <td><i>27kb, Несжатая версия с коментариями</i></td> 
       </tr> 
       <tr> 
         <td><a href="http://documentcloud.github.com/underscore/underscore-min.js">Production Version (1.1.6)</a></td> 
-        <td><i>3kb, Minified and Gzipped</i></td> 
+        <td><i>3kb, Уменьшенная и сжатая версия</i></td> 
       </tr> 
     </table>
  
-    <h2 id="TableContents">Table of Contents</h2> 
-	<a href="#ObjectOrientedFunctionalStyles">Object-Oriented and Functional Styles</a> 
- 
-    <p> 
-      <b id="TableContents-collections">Collections</b> 
-      <br /> 
-      <span class="methods"><a href="#CollectionFunctions-each">each</a>, <a href="#CollectionFunctions-map">map</a>,
-      <a href="#CollectionFunctions-reduce">reduce</a>, <a href="#CollectionFunctions-reduceRight">reduceRight</a>,
-      <a href="#CollectionFunctions-detect">detect</a>, <a href="#CollectionFunctions-select">select</a>,
-      <a href="#CollectionFunctions-reject">reject</a>, <a href="#CollectionFunctions-all">all</a>,
-      <a href="#CollectionFunctions-any">any</a>, <a href="#CollectionFunctions-include">include</a>,
-      <a href="#CollectionFunctions-invoke">invoke</a>, <a href="#CollectionFunctions-pluck">pluck</a>,
-      <a href="#CollectionFunctions-max">max</a>, <a href="#CollectionFunctions-min">min</a>,
-      <a href="#CollectionFunctions-sortBy">sortBy</a>, <a href="#CollectionFunctions-sortedIndex">sortedIndex</a>,
-      <a href="#CollectionFunctions-toArray">toArray</a>, <a href="#CollectionFunctions-size">size</a></span> 
-    </p> 
- 
-    <p> 
-      <b id="TableContents-arrays">Arrays</b> 
-      <br /> 
-      <span class="methods"><a href="#ArrayFunctions-first">first</a>, <a href="#ArrayFunctions-rest">rest</a>, 
-	  <a href="#ArrayFunctions-last">last</a>, <a href="#ArrayFunctions-compact">compact</a>, 
-	  <a href="#ArrayFunctions-flatten">flatten</a>, <a href="#ArrayFunctions-without">without</a>, 
-	  <a href="#ArrayFunctions-uniq">uniq</a>, <a href="#ArrayFunctions-intersect">intersect</a>, 
-	  <a href="#ArrayFunctions-zip">zip</a>, <a href="#ArrayFunctions-indexOf">indexOf</a>,
-      <a href="#ArrayFunctions-lastIndexOf">lastIndexOf</a>, <a href="#rArrayFunctions-ange">range</a></span> 
-    </p> 
- 
-    <p> 
-      <b id="TableContents-functions">Functions</b> 
-      <br /> 
-      <span class="methods"><a href="#Functions-bind">bind</a>, <a href="#Functions-bindAll">bindAll</a>, 
-      <a href="#Functions-memoize">memoize</a>, <a href="#Functions-delay">delay</a>, 
-	  <a href="#Functions-defer">defer</a>, <a href="#Functions-throttle">throttle</a>, 
-	  <a href="#Functions-debounce">debounce</a>, <a href="#Functions-once">once</a>, 
-	  <a href="#Functions-after">after</a>, <a href="#Functions-wrap">wrap</a>, 
-	  <a href="#Functions-compose">compose</a></span> 
-    </p> 
- 
-    <p> 
-      <b id="TableContents-objects">Objects</b> 
-      <br /> 
-      <span class="methods"><a href="#Objects-keys">keys</a>, <a href="#Objects-values">values</a>,
-      <a href="#Objects-functions">functions</a>, <a href="#Objects-Objects-extend">extend</a>, 
-	  <a href="#Objects-defaults">defaults</a>, <a href="#Objects-clone">clone</a>, 
-	  <a href="#Objects-tap">tap</a>, <a href="#Objects-isEqual">isEqual</a>, 
-	  <a href="#Objects-isEmpty">isEmpty</a>, <a href="#Objects-isElement">isElement</a>,
-      <a href="#Objects-isArray">isArray</a>, <a href="#Objects-isArguments">isArguments</a>, 
-	  <a href="#Objects-isFunction">isFunction</a>, <a href="#Objects-isString">isString</a>,
-      <a href="#Objects-isNumber">isNumber</a>, <a href="#Objects-isBoolean">isBoolean</a>, 
-	  <a href="#Objects-isDate">isDate</a>, <a href="#Objects-isRegExp">isRegExp</a> 
-      <a href="#Objects-isNaN">isNaN</a>, <a href="#Objects-isNull">isNull</a>,
-      <a href="#Objects-isUndefined">isUndefined</a> 
-      </span> 
-    </p> 
- 
-    <p> 
-      <b id="TableContents-utility">Utility</b> 
-      <br /> 
-      <span class="methods"><a href="#Utility-noConflict">noConflict</a>,
-      <a href="#Utility-identity">identity</a>, <a href="#Utility-times">times</a>, 
-      <a href="#Utility-mixin">mixin</a>, <a href="#Utility-uniqueId">uniqueId</a>, 
-      <a href="#Utility-template">template</a></span> 
-    </p> 
- 
-    <p> 
-      <b id="TableContents-chaining">Chaining</b> 
-      <br /> 
-      <span class="methods"><a href="#Chaining-chain">chain</a>, <a href="#Chaining-value">value</a> 
-    </p>
-
 	<h2 id="ObjectOrientedFunctionalStyles">Object-Oriented and Functional Styles</h2> 
 	
 	<p> 
-	You can use Underscore in either an object-oriented or a functional style,
-	depending on your preference. The following two lines of code are
-	identical ways to double a list of numbers.
+	Вы можете использовать Underscore в любом объектно-ориентированном или функциональном стиле,
+	в зависимости от ваших предпочтений. Следующие две строки кода идентичны по значению.
 	</p> 
  
     <pre>_.map([1, 2, 3], function(n){ return n * 2; });
 _([1, 2, 3]).map(function(n){ return n * 2; });</pre>
  
-	<p> 
-	Using the object-oriented style allows you to chain together methods. Calling
+	<p>
+	Использование объектно-ориентированного стиля позволяет связывать между собой методы.
+	Calling
 	<tt>chain</tt> on a wrapped object will cause all future method calls to
 	return wrapped objects as well. When you've finished the computation,
 	use <tt>value</tt> to retrieve the final value. Here's an example of chaining
