@@ -930,8 +930,8 @@ welcome('moe');
  
       <p id="Objects-keys"> 
         <b class="header">keys</b><code>_.keys(object)</code> 
-        <br /> 
-        Retrieve all the names of the <b>object</b>'s properties.
+        <br />
+	Функция возвращает все имена <i>(ключи)</i> свойств <b>объекта</b>.
       </p> 
 <pre>_.keys({one : 1, two : 2, three : 3});
 =&gt; ["one", "two", "three"]
@@ -940,7 +940,7 @@ welcome('moe');
       <p id="Objects-values"> 
         <b class="header">values</b><code>_.values(object)</code> 
         <br /> 
-        Return all of the values of the <b>object</b>'s properties.
+        Функция возвращает все значения свойств <b>объекта</b>.
       </p> 
 <pre>_.values({one : 1, two : 2, three : 3});
 =&gt; [1, 2, 3]
@@ -949,9 +949,9 @@ welcome('moe');
       <p id="Objects-functions"> 
         <b class="header">functions</b><code>_.functions(object)</code> 
         <span class="alias">Alias: <b>methods</b></span> 
-        <br /> 
-        Returns a sorted list of the names of every method in an object &mdash;
-        that is to say, the name of every function property of the object.
+        <br />
+	Функция возвращает отсортированный список имен каждого метода в объекте &mdash;
+	то есть, имя каждой функции и свойства объекта.
       </p> 
 <pre>_.functions(_);
 =&gt; ["all", "any", "bind", "bindAll", "clone", "compact", "compose" ...
