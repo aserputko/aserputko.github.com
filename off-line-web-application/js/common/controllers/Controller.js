@@ -1,5 +1,8 @@
 (function () {
-		
+	
+	var common = {};
+	var offLineWebApp = {};
+	
     common.Controller = Backbone.Controller.extend({
 		
         initialize : function (options) {
