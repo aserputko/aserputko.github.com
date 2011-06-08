@@ -18,7 +18,7 @@ $(document).ready(function () {
                 page        : page,
                 id          : id
             };
-            var presantation = new offLineWebApp.presantationController(options);
+            var presantation = new offLineWebAppPresantationController(options);
         }
     });
     
