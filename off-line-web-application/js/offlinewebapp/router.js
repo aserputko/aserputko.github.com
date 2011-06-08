@@ -2,11 +2,11 @@ $(document).ready(function () {
     var router = Backbone.Controller.extend({
 		
         initialize : function () {
-			this._conteinerId = "home"
+			this._containerId = "home";
         },
 
         routes: {
-            "": "offLineWebApp",
+            "": "presentation",
             "presentation": "presentation",
             "presentation/:page": "presentation",
             "presentation/:page/:id": "presentation"
@@ -14,7 +14,7 @@ $(document).ready(function () {
 
         presentation : function (page, id) {
             var options = {
-				conteinerId : this._conteinerId,
+				containerId : this._containerId,
                 page        : page,
                 id          : id
             };
@@ -22,6 +22,6 @@ $(document).ready(function () {
         }
     });
     
-    var ready = new router();
+    var router = new router();
     Backbone.history.start();
 });
