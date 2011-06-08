@@ -7,18 +7,18 @@ $(document).ready(function () {
 
         routes: {
             "": "offLineWebApp",
-            "presentation": "offLineWebApp",
-            "presentation/:page": "offLineWebApp",
-            "presentation/:page/:id": "offLineWebApp"
+            "presentation": "presentation",
+            "presentation/:page": "presentation",
+            "presentation/:page/:id": "presentation"
         },
 
-        offLineWebApp : function (page, id) {
+        presentation : function (page, id) {
             var options = {
 				conteinerId : this._conteinerId,
                 page        : page,
                 id          : id
             };
-            var presantation = new offLineWebAppController(options);
+            var presantation = new offLineWebApp.presantationController(options);
         }
     });
     
