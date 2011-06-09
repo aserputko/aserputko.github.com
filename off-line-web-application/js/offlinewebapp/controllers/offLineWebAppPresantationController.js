@@ -9,10 +9,11 @@
 		 * 		id : id
 		 * 	}
 		 */
-        initialize : function (options) {                      
+        initialize : function (options) {
             Controller.prototype.initialize.call(this, options);
             this._options = options;
-            this._view    = new offLineWebAppPresantationView({el : this._el}); 
+            this._model   = new offLineWebAppPresantationModel();
+            this._view    = new offLineWebAppPresantationView({el : this._el});            
             this._method  = options.page ? this[options.page] : this.start;
 			this._method  ? this._method() : this.show404Page();
         },
@@ -33,5 +34,5 @@
 			}
 			this._view.render(id, options);
 		}
-    });    
+    });   
 })();

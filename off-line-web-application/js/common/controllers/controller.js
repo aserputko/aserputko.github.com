@@ -32,5 +32,6 @@
 			};
 			_.each(eventHandlerMap, $.proxy(bindEvent, this));
 		}
-    });
+    });    
+    Controller.extend = Backbone.Model.extend;
 })();
