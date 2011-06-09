@@ -31,7 +31,7 @@
 			
 			this.cid = this._uniqueId('SoftServe');
 			this.id  = attributes.id || this.cid;
-			this.url = '/data.json'
+			this.url = '/off-line-web-application/data.json'
 		},
 		
 		/**
