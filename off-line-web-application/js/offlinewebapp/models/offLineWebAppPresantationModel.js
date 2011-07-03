@@ -4,8 +4,9 @@
 				
 		initialize : function (options) {
 			Model.prototype.initialize.call(this, options);
-			console.log(this.url);
-			this.save();
+			this.url = '/off-line-web-application/data.php'
+			var result = this.save();
+			console.log(result)
 		}	
 	});
 })();

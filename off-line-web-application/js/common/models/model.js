@@ -30,8 +30,7 @@
 			var STATES = this.STATES;			
 			
 			this.cid = this._uniqueId('SoftServe');
-			this.id  = attributes.id || this.cid;
-			this.url = '/off-line-web-application/data.json'
+			this.id  = attributes.id || this.cid;			
 		},
 		
 		/**
