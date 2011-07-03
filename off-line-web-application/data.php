@@ -1,3 +1,3 @@
 <?php
 
-echo "{name: 'Andrew'}"
+echo "{name: 'Andrew'}";
