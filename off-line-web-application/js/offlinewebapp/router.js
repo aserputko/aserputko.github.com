@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    var router = Backbone.Controller.extend({
+    var router = Backbone.Router.extend({
 		
-        initialize : function () {
-			this._containerId = "home";
+		initialize : function (options) {
+			this._containerId = 'home';
         },
 
         routes: {
@@ -23,5 +23,5 @@ $(document).ready(function () {
     });
     
     var router = new router();
-    Backbone.history.start();
+    Backbone.history.start()
 });

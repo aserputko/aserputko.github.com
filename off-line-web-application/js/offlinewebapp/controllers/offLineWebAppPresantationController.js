@@ -12,7 +12,7 @@
         initialize : function (options) {
             Controller.prototype.initialize.call(this, options);
             this._options = options;
-            this._model   = new offLineWebAppPresantationModel();
+            this._model   = new offLineWebAppPresantationModel({id : ''});
             this._view    = new offLineWebAppPresantationView({el : this._el});            
             this._method  = options.page ? this[options.page] : this.start;
 			this._method  ? this._method() : this.show404Page();

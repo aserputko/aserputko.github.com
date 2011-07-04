@@ -1,9 +1,9 @@
 (function () {
 	
-    Controller = Backbone.Controller.extend({
+    Controller = Backbone.Collection.extend({
 		
         initialize : function (options) {
-			this._el = options.containerId ? $('#' + options.containerId) : this._show404Page();			
+			this._el = options.containerId ? $('#' + options.containerId) : this.show404Page();			
 			this._businessEvents = {};
         },
         
