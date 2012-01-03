@@ -4,7 +4,7 @@
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 }
 .lb-album li{
-	float: left;
+	float: right;
 	margin: 5px;
 	position: relative;
 }
@@ -78,17 +78,10 @@
 .lb-overlay > div{
 	position: relative;
 	color: rgba(27,54,81,0.8);
-	opacity: 0;
-	filter: alpha(opacity=0); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
 	width: 550px;
-	margin: 25px auto 0px auto;
+	height: 80px;
+	margin: 40px auto 0px auto;
 	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
-	-webkit-transition: opacity 0.3s linear 1.3s;
-	-moz-transition: opacity 0.3s linear 1.3s;
-	-o-transition: opacity 0.3s linear 1.3s;
-	-ms-transition: opacity 0.3s linear 1.3s;
-	transition: opacity 0.3s linear 1.3s;
 }
 .lb-overlay div h3,
 .lb-overlay div p{
@@ -113,6 +106,7 @@
 	line-height: 6px;
 }
 .lb-overlay div p{
+	font-size: 14px;
 	text-align: left;
 	float: left;
 	width: 260px;
@@ -137,73 +131,27 @@
 	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
 	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	-webkit-transition: opacity 0.3s linear 1.2s;
-	-moz-transition: opacity 0.3s linear 1.2s;
-	-o-transition: opacity 0.3s linear 1.2s;
-	-ms-transition: opacity 0.3s linear 1.2s;
-	transition: opacity 0.3s linear 1.2s;
 }
 .lb-overlay img{
 	/* height: 100%; For Opera max-height does not seem to work */
 	max-height: 100%;
 	position: relative;
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
 	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+	-webkit-transition: opacity 0.5s linear;
+	-moz-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	-ms-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
 }
-.lb-overlay:target {
-	width: auto;
-	height: auto;
-	bottom: 0px;
-	right: 0px;
-	padding: 80px 100px 120px 100px;
-}
-.lb-overlay:target img {
-	-webkit-animation: fadeInScale 1.2s ease-in-out;
-	-moz-animation: fadeInScale 1.2s ease-in-out;
-	-o-animation: fadeInScale 1.2s ease-in-out;
-	-ms-animation: fadeInScale 1.2s ease-in-out;
-	animation: fadeInScale 1.2s ease-in-out;
-}
-.lb-overlay:target a.lb-close,
-.lb-overlay:target > div{
-	opacity: 1;
-	filter: alpha(opacity=99); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
-}
-@-webkit-keyframes fadeInScale {
-  0% { -webkit-transform: scale(0.6); opacity: 0; }
-  100% { -webkit-transform: scale(1); opacity: 1; }
-}
-@-moz-keyframes fadeInScale {
-  0% { -moz-transform: scale(0.6); opacity: 0; }
-  100% { -moz-transform: scale(1); opacity: 1; }
-}
-@-o-keyframes fadeInScale {
-  0% { -o-transform: scale(0.6); opacity: 0; }
-  100% { -o-transform: scale(1); opacity: 1; }
-}
-@-ms-keyframes fadeInScale {
-  0% { -ms-transform: scale(0.6); opacity: 0; }
-  100% { -ms-transform: scale(1); opacity: 1; }
-}
-@keyframes fadeInScale {
-  0% { transform: scale(0.6); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* 
-	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
-	http://bricss.net/post/11230266445/css-hack-to-target-opera 
-*/
-x:-o-prefocus, .lb-overlay img {
-    height: 100%;
-}
-
 .lb-prev, .lb-next{
 	text-indent: -9000px;
 	position: absolute;
-	top: -25px;
+	top: -32px;
 	width: 24px;
 	height: 25px;
 	left: 50%;
@@ -223,4 +171,24 @@ x:-o-prefocus, .lb-overlay img {
 .lb-next{
 	margin-left: 6px;
 	background: transparent url(../images/arrows.png) no-repeat top right;
+}
+.lb-overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+	padding: 80px 100px 120px 100px;
+}
+.lb-overlay:target img,
+.lb-overlay:target a.lb-close{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+/* 
+	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
+	http://bricss.net/post/11230266445/css-hack-to-target-opera 
+*/
+x:-o-prefocus, .lb-overlay img {
+    height: 100%;
 }
